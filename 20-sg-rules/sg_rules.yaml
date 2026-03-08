@@ -1,0 +1,15 @@
+bastion:
+- name: bastion_internet
+  port: 22
+  src: internet 
+  dest: bastion
+
+mangodb:
+- name: mangodb_bastion
+  port: 22
+  src: bastion
+  dest: mangodb
+- name: mangodb_catalogue
+  port: 27017
+  src: catalouge 
+  dest: mangodb
